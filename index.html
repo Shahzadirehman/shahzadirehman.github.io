@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shahzadi Rehman | Artist • Creator • Entrepreneur</title>
+
+  <meta name="description"
+        content="The official website of Shahzadi Rehman — artist, creator and entrepreneur exploring textured art, abstract expression and creative living.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f7f4ef;
+      color: #282521;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      width: 100%;
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 8% 70px;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(circle at 75% 35%, rgba(192,166,135,.32), transparent 28%),
+        radial-gradient(circle at 18% 75%, rgba(207,190,175,.4), transparent 30%),
+        linear-gradient(135deg, #f8f5f0, #e9ded2);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 540px;
+      right: 8%;
+      top: 20%;
+      border-radius: 48% 52% 44% 56%;
+      background:
+        linear-gradient(
+          140deg,
+          rgba(255,255,255,.4),
+          rgba(174,142,111,.25)
+        );
+      transform: rotate(7deg);
+    }
+
+    .hero-content {
+      width: 60%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      margin-bottom: 22px;
+      color: #876f5a;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(65px, 10vw, 125px);
+      font-weight: 400;
+      line-height: .85;
+      margin-bottom: 30px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      color: #51483f;
+      margin-bottom: 38px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      border: 1px solid #37312c;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: .3s;
+    }
+
+    .button:hover {
+      background: #37312c;
+      color: white;
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 110px 8%;
+    }
+
+    .section-label {
+      color: #9a7d63;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: clamp(45px, 6vw, 72px);
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+
+    /* INTRO */
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .art-placeholder {
+      height: 570px;
+      background:
+        radial-gradient(circle at 30% 30%, #dfd1c2 0 15%, transparent 16%),
+        radial-gradient(circle at 65% 55%, #aa8c72 0 18%, transparent 19%),
+        linear-gradient(145deg, #ece4dc, #bda58f);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .art-placeholder::after {
+      content: "YOUR ARTWORK";
+      position: absolute;
+      bottom: 25px;
+      left: 28px;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: rgba(255,255,255,.8);
+    }
+
+    .intro-text p {
+      margin-bottom: 18px;
+      color: #5c5650;
+      max-width: 600px;
+    }
+
+    /* ART COLLECTION */
+
+    .collection {
+      background: #24211e;
+      color: #f5f0e9;
+    }
+
+    .collection .section-label {
+      color: #c2a98f;
+    }
+
+    .collection-intro {
+      max-width: 720px;
+      margin-bottom: 55px;
+      color: #c8c0b8;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 22px;
+    }
+
+    .piece {
+      min-height: 440px;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .piece:nth-child(1) {
+      background:
+        radial-gradient(circle at 40% 35%, #d7c4b3 0 18%, transparent 19%),
+        linear-gradient(145deg,#ede5dc,#9d8066);
+    }
+
+    .piece:nth-child(2) {
+      background:
+        radial-gradient(circle at 65% 45%, #c5a88f 0 22%, transparent 23%),
+        linear-gradient(120deg,#ebe1d5,#6f5b4b);
+    }
+
+    .piece:nth-child(3) {
+      background:
+        radial-gradient(circle at 35% 60%, #e7d9cd 0 20%, transparent 21%),
+        linear-gradient(160deg,#b79579,#f0e9e1);
+    }
+
+    .piece-info {
+      position: absolute;
+      left: 22px;
+      bottom: 20px;
+      color: white;
+    }
+
+    .piece-info h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    .piece-info span {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* STUDIO */
+
+    .studio {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .studio p {
+      color: #625b54;
+      margin: auto auto 30px;
+      max-width: 700px;
+    }
+
+    /* JOURNAL */
+
+    .journal {
+      background: #eee7df;
+    }
+
+    .journal-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 35px;
+      margin-top: 50px;
+    }
+
+    .journal-card {
+      border-top: 1px solid #aa9d91;
+      padding-top: 25px;
+    }
+
+    .journal-card span {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #98785d;
+    }
+
+    .journal-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 31px;
+      font-weight: 400;
+      margin: 12px 0;
+    }
+
+    .journal-card p {
+      font-size: 13px;
+      color: #625c55;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      background: #faf8f5;
+    }
+
+    .contact p {
+      max-width: 600px;
+      margin: 0 auto 35px;
+      color: #69615a;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #1f1d1b;
+      color: #c9c1b8;
+      padding: 45px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+      color: white;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 20px 6%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-left: 7%;
+        padding-right: 7%;
+      }
+
+      .hero-content {
+        width: 100%;
+      }
+
+      .hero::after {
+        width: 230px;
+        height: 320px;
+        right: -80px;
+        top: 38%;
+      }
+
+      .hero-text {
+        font-size: 21px;
+        max-width: 85%;
+      }
+
+      section {
+        padding: 80px 7%;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .art-placeholder {
+        height: 430px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .piece {
+        min-height: 480px;
+      }
+
+      .journal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+
+  <div class="logo">SR.</div>
+
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#art">Art</a>
+    <a href="#studio">Studio</a>
+    <a href="#journal">Journal</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+</nav>
+
+
+<header class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      Artist • Creator • Entrepreneur
+    </div>
+
+    <h1>
+      Shahzadi<br>Rehman
+    </h1>
+
+    <div class="hero-text">
+      Art born from texture, emotion and imagination.
+      A personal journey into abstract expression and creative living.
+    </div>
+
+    <a class="button" href="#art">
+      Discover My Art
+    </a>
+
+  </div>
+
+</header>
+
+
+<section id="about">
+
+  <div class="intro">
+
+    <div class="art-placeholder"></div>
+
+    <div class="intro-text">
+
+      <div class="section-label">My Story</div>
+
+      <h2>
+        Where life meets creativity.
+      </h2>
+
+      <p>
+        Welcome to my creative world. I am Shahzadi Rehman,
+        an artist and creator exploring expression through
+        textured and abstract art.
+      </p>
+
+      <p>
+        My work is inspired by emotion, movement, interiors,
+        experiences and the beauty found in imperfect details.
+        Every canvas is an opportunity to turn a feeling,
+        memory or idea into something tangible.
+      </p>
+
+      <p>
+        This space is not only a gallery of my work.
+        It is a reflection of my evolving journey — personal,
+        creative and entrepreneurial.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="collection" id="art">
+
+  <div class="section-label">Selected Works</div>
+
+  <h2>
+    The Art
+  </h2>
+
+  <p class="collection-intro">
+    An evolving collection of textured and abstract pieces,
+    created to bring depth, movement and character into a space.
+    Original collections and commissioned artwork will be
+    presented here.
+  </p>
+
+
+  <div class="gallery">
+
+    <div class="piece">
+
+      <div class="piece-info">
+        <span>Textured Collection</span>
+        <h3>Untitled I</h3>
+      </div>
+
+    </div>
+
+
+    <div class="piece">
+
+      <div class="piece-info">
+        <span>Abstract Collection</span>
+        <h3>Untitled II</h3>
+      </div>
+
+    </div>
+
+
+    <div class="piece">
+
+      <div class="piece-info">
+        <span>Original Work</span>
+        <h3>Untitled III</h3>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="studio">
+
+  <div class="studio">
+
+    <div class="section-label">Coming Soon</div>
+
+    <h2>
+      The Studio
+    </h2>
+
+    <p>
+      Something beautiful is taking shape.
+      I am building an art studio and creative brand dedicated
+      to original textured and abstract artwork.
+    </p>
+
+    <p>
+      Future collections, bespoke commissions and pieces
+      available for purchase will be announced here.
+    </p>
+
+    <a class="button" href="#contact">
+      Enquire
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="journal" id="journal">
+
+  <div class="section-label">Personal Journal</div>
+
+  <h2>
+    Beyond the Canvas
+  </h2>
+
+
+  <div class="journal-grid">
+
+    <div class="journal-card">
+
+      <span>Art</span>
+
+      <h3>
+        Finding my artistic voice
+      </h3>
+
+      <p>
+        Thoughts from my journey into creativity,
+        experimentation and artistic expression.
+      </p>
+
+    </div>
+
+
+    <div class="journal-card">
+
+      <span>Behind the Scenes</span>
+
+      <h3>
+        From an idea to a canvas
+      </h3>
+
+      <p>
+        A look into textures, inspiration,
+        materials and the process behind my work.
+      </p>
+
+    </div>
+
+
+    <div class="journal-card">
+
+      <span>Life</span>
+
+      <h3>
+        Creating a life that feels like mine
+      </h3>
+
+      <p>
+        Personal reflections on ambition,
+        creativity, growth and building something new.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <div class="section-label">Let's Connect</div>
+
+  <h2>
+    Art. Ideas. Collaborations.
+  </h2>
+
+  <p>
+    For artwork enquiries, commissions,
+    collaborations or simply to follow the journey,
+    get in touch.
+  </p>
+
+  <a class="button"
+     href="mailto:hello@shahzadirehman.com">
+     Contact Me
+  </a>
+
+</section>
+
+
+<footer>
+
+  <div class="footer-logo">
+    Shahzadi Rehman
+  </div>
+
+  <div>
+    © 2026 Shahzadi Rehman. All Rights Reserved.
+  </div>
+
+</footer>
+
+
+</body>
+</html>
